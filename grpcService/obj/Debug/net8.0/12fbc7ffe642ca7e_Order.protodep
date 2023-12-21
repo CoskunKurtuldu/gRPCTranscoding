@@ -1,0 +1,5 @@
+obj\Debug\net8.0\Protos/Order.cs \
+obj\Debug\net8.0\Protos/OrderGrpc.cs: google/api/http.proto\
+ C:/Users/A/.nuget/packages/grpc.tools/2.60.0/build/native/include/google/protobuf/descriptor.proto\
+ google/api/annotations.proto\
+ Protos/Order.proto

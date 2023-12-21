@@ -1,0 +1,218 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>grpcService</name>
+    </assembly>
+    <members>
+        <member name="T:grpcService.Migrations.Init">
+            <inheritdoc />
+        </member>
+        <member name="M:grpcService.Migrations.Init.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:grpcService.Migrations.Init.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:grpcService.Migrations.Init.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:grpcService.Services.OrderServices.OrderService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:grpcService.Services.OrderServices.OrderService.#ctor(grpcService.Models.AppDbContext)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+        </member>
+        <member name="M:grpcService.Services.OrderServices.OrderService.AddOrder(grpcService.Models.Order)">
+            <summary>
+            
+            </summary>
+            <param name="order"></param>
+            <returns></returns>
+        </member>
+        <member name="M:grpcService.Services.OrderServices.OrderService.AllOrders">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:grpcService.Services.OrderServices.OrderService.DeleteOrderById(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:grpcService.Services.OrderServices.OrderService.EditOrder(grpcService.Models.Order)">
+            <summary>
+            
+            </summary>
+            <param name="order"></param>
+            <returns></returns>
+        </member>
+        <member name="M:grpcService.Services.OrderServices.OrderService.GetOrderById(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:OrderServiceGrpc.OrderReflection">
+            <summary>Holder for reflection information generated from Protos/Order.proto</summary>
+        </member>
+        <member name="P:OrderServiceGrpc.OrderReflection.Descriptor">
+            <summary>File descriptor for Protos/Order.proto</summary>
+        </member>
+        <member name="T:OrderServiceGrpc.CreateOrderRequest">
+            <summary>
+            Create Order
+            </summary>
+        </member>
+        <member name="F:OrderServiceGrpc.CreateOrderRequest.NameFieldNumber">
+            <summary>Field number for the "name" field.</summary>
+        </member>
+        <member name="F:OrderServiceGrpc.CreateOrderRequest.EnableFieldNumber">
+            <summary>Field number for the "enable" field.</summary>
+        </member>
+        <member name="F:OrderServiceGrpc.CreateOrderResponse.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="F:OrderServiceGrpc.CreateOrderResponse.NameFieldNumber">
+            <summary>Field number for the "name" field.</summary>
+        </member>
+        <member name="F:OrderServiceGrpc.CreateOrderResponse.EnableFieldNumber">
+            <summary>Field number for the "enable" field.</summary>
+        </member>
+        <member name="F:OrderServiceGrpc.CreateOrderResponse.CreatedAtFieldNumber">
+            <summary>Field number for the "created_at" field.</summary>
+        </member>
+        <member name="T:OrderServiceGrpc.EditOrderRequest">
+            <summary>
+            Edit Order
+            </summary>
+        </member>
+        <member name="F:OrderServiceGrpc.EditOrderRequest.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="F:OrderServiceGrpc.EditOrderRequest.NameFieldNumber">
+            <summary>Field number for the "name" field.</summary>
+        </member>
+        <member name="F:OrderServiceGrpc.EditOrderRequest.EnableFieldNumber">
+            <summary>Field number for the "enable" field.</summary>
+        </member>
+        <member name="F:OrderServiceGrpc.EditOrderResponse.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="F:OrderServiceGrpc.EditOrderResponse.NameFieldNumber">
+            <summary>Field number for the "name" field.</summary>
+        </member>
+        <member name="F:OrderServiceGrpc.EditOrderResponse.EnableFieldNumber">
+            <summary>Field number for the "enable" field.</summary>
+        </member>
+        <member name="F:OrderServiceGrpc.EditOrderResponse.CreatedAtFieldNumber">
+            <summary>Field number for the "created_at" field.</summary>
+        </member>
+        <member name="T:OrderServiceGrpc.GetOrderRequest">
+            <summary>
+            Get a Order based on the id
+            </summary>
+        </member>
+        <member name="F:OrderServiceGrpc.GetOrderRequest.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="F:OrderServiceGrpc.GetOrderResponse.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="F:OrderServiceGrpc.GetOrderResponse.NameFieldNumber">
+            <summary>Field number for the "name" field.</summary>
+        </member>
+        <member name="F:OrderServiceGrpc.GetOrderResponse.EnableFieldNumber">
+            <summary>Field number for the "enable" field.</summary>
+        </member>
+        <member name="F:OrderServiceGrpc.GetOrderResponse.CreatedAtFieldNumber">
+            <summary>Field number for the "created_at" field.</summary>
+        </member>
+        <member name="T:OrderServiceGrpc.GetAllOrdersRequest">
+            <summary>
+            List of all Orders
+            </summary>
+        </member>
+        <member name="F:OrderServiceGrpc.GetAllOrdersResponse.OrderFieldNumber">
+            <summary>Field number for the "Order" field.</summary>
+        </member>
+        <member name="T:OrderServiceGrpc.DeleteOrderRequest">
+            <summary>
+            Delete a Order
+            </summary>
+        </member>
+        <member name="F:OrderServiceGrpc.DeleteOrderRequest.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="F:OrderServiceGrpc.DeleteOrderResponse.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="F:OrderServiceGrpc.DeleteOrderResponse.NameFieldNumber">
+            <summary>Field number for the "name" field.</summary>
+        </member>
+        <member name="P:OrderServiceGrpc.Orders.Descriptor">
+            <summary>Service descriptor</summary>
+        </member>
+        <member name="T:OrderServiceGrpc.Orders.OrdersBase">
+            <summary>Base class for server-side implementations of Orders</summary>
+        </member>
+        <member name="M:OrderServiceGrpc.Orders.OrdersBase.CreateOrder(OrderServiceGrpc.CreateOrderRequest,Grpc.Core.ServerCallContext)">
+            <summary>
+            Create Order
+            </summary>
+            <param name="request">The request received from the client.</param>
+            <param name="context">The context of the server-side call handler being invoked.</param>
+            <returns>The response to send back to the client (wrapped by a task).</returns>
+        </member>
+        <member name="M:OrderServiceGrpc.Orders.OrdersBase.EditeOrder(OrderServiceGrpc.EditOrderRequest,Grpc.Core.ServerCallContext)">
+            <summary>
+            Edit Order
+            </summary>
+            <param name="request">The request received from the client.</param>
+            <param name="context">The context of the server-side call handler being invoked.</param>
+            <returns>The response to send back to the client (wrapped by a task).</returns>
+        </member>
+        <member name="M:OrderServiceGrpc.Orders.OrdersBase.ListOrders(OrderServiceGrpc.GetAllOrdersRequest,Grpc.Core.ServerCallContext)">
+            <summary>
+            List of All Orders
+            </summary>
+            <param name="request">The request received from the client.</param>
+            <param name="context">The context of the server-side call handler being invoked.</param>
+            <returns>The response to send back to the client (wrapped by a task).</returns>
+        </member>
+        <member name="M:OrderServiceGrpc.Orders.OrdersBase.GetOrderById(OrderServiceGrpc.GetOrderRequest,Grpc.Core.ServerCallContext)">
+            <summary>
+            Get a Order based on the id
+            </summary>
+            <param name="request">The request received from the client.</param>
+            <param name="context">The context of the server-side call handler being invoked.</param>
+            <returns>The response to send back to the client (wrapped by a task).</returns>
+        </member>
+        <member name="M:OrderServiceGrpc.Orders.OrdersBase.DeleteOrder(OrderServiceGrpc.DeleteOrderRequest,Grpc.Core.ServerCallContext)">
+            <summary>
+            Delete Order
+            </summary>
+            <param name="request">The request received from the client.</param>
+            <param name="context">The context of the server-side call handler being invoked.</param>
+            <returns>The response to send back to the client (wrapped by a task).</returns>
+        </member>
+        <member name="M:OrderServiceGrpc.Orders.BindService(OrderServiceGrpc.Orders.OrdersBase)">
+            <summary>Creates service definition that can be registered with a server</summary>
+            <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+        </member>
+        <member name="M:OrderServiceGrpc.Orders.BindService(Grpc.Core.ServiceBinderBase,OrderServiceGrpc.Orders.OrdersBase)">
+            <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
+            Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+            <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+            <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+        </member>
+    </members>
+</doc>

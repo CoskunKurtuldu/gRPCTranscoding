@@ -1,0 +1,104 @@
+﻿syntax ="proto3";
+option csharp_namespace = "OrderServiceGrpc";
+
+import "google/api/annotations.proto";
+
+package order;
+
+service Orders{
+	// Create Order
+	rpc CreateOrder (CreateOrderRequest) returns (CreateOrderResponse){
+		option (google.api.http) = {
+			post : "/api/order",
+			body : "*"
+		};
+	}
+
+	// Edit Order
+	rpc EditeOrder (EditOrderRequest) returns (EditOrderResponse){
+		option (google.api.http) = {
+			put : "/api/order",
+			body : "*"
+		};
+	}
+	// List of All Orders
+	rpc ListOrders(GetAllOrdersRequest) returns (GetAllOrdersResponse){
+		option (google.api.http) ={
+			get : "/api/order"
+		};
+	}
+	
+	// Get a Order based on the id
+	rpc GetOrderById(GetOrderRequest) returns (GetOrderResponse){
+		option (google.api.http) ={
+			get : "/api/order/{id}"
+		};
+	}
+
+	// Delete Order
+	rpc DeleteOrder(DeleteOrderRequest) returns (DeleteOrderResponse){
+		option (google.api.http) = {
+			delete : "/api/order/{id}"
+		};
+	}
+}
+
+// contract for each function
+
+// Create Order
+message CreateOrderRequest{
+	string name = 1;
+	bool enable = 2;
+}
+
+message CreateOrderResponse{
+	string id = 1;
+	string name = 2;
+	bool enable = 3;
+	string created_at = 4;
+}
+
+// Edit Order
+message EditOrderRequest{
+	string id = 1;
+	string name = 2;
+	bool enable = 3;
+}
+
+message EditOrderResponse{
+	string id = 1;
+	string name = 2;
+	bool enable = 3;
+	string created_at = 4;
+}
+
+// Get a Order based on the id
+message GetOrderRequest{
+	string id =1;
+}
+message GetOrderResponse{
+	string id = 1;
+	string name = 2;
+	bool enable = 3;
+	string created_at =4;
+}
+
+// List of all Orders
+message GetAllOrdersRequest
+{
+
+}
+message GetAllOrdersResponse
+{
+	repeated GetOrderResponse Order = 1;
+}
+
+// Delete a Order
+message DeleteOrderRequest {
+	string id = 1;
+
+}
+message DeleteOrderResponse{
+	string id = 1;
+	string name = 2;
+}
